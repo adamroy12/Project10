@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* body stylings */
+
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+
+/* sidebar stylings */
+
+
+.container {
+    display:flex;
+    flex-flow: row wrap;
+    color:white;
+    font-family: "Noto Sans", sans-serif;
+
+    .sidebar{
+        background-color: rgb(0, 0, 0);
+        width:10%;
+        height:100%;
+        padding: 0 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebartop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 1rem;
+
+            .menu {
+                color: white;
+                text-align: end;
+                width:20%;
+                i {
+                    font-size:1.75rem;
+                    cursor:pointer;
+                }
+                
+            }
+            .logo{
+                width:100%;
+                img {
+                    height: auto;
+                    width:100%;
+                }
+
+        
+
+            }
+        }
+
+        nav {
+            ul {
+                padding:0;
+                margin:0;
+                list-style: none;
+
+                li { 
+                    display: block;
+                    align-items:center;
+                    padding:1.25rem 0;
+                    position:relative;
+                    background-color:transparent;
+                    transition: background-color .25s ease-in-out;
+                    
+                    a {
+                        display:block;
+                        i {
+                            font-size:1.25rem;
+                            width:25px;
+                            height:20px;
+                            text-align:center;
+
+                        }
+                        .text {
+                            position: relative;
+                            left:1rem;
+                            top:-.20rem;
+                        }
+                    }
+
+                }
+            }
+        }
+        .account {
+            display:flex;
+            justify-content: space-between;
+            align-content: center;
+            align-items:center;
+            width:calc(100% - 2rem);
+            position:absolute;
+            bottom:1rem;
+
+            .avatar {
+                margin-right:1rem;
+                width:20%;
+
+                img {
+                    border-radius:50%;
+                    height:50px;
+                    width:50px;
+                }
+            }
+
+            .name {
+                flex: 1 1 auto;
+                margin-left: 0.5rem;
+                h4 {
+                    padding: 0;
+                    margin:0;
+
+                }
+
+            }
+
+            .logout {
+                flex: 1 1 auto;
+                text-align: end;
+                i {
+                    font-size:1.5rem;
+                }
+
+            }
+
+
+        }
+    }
+}
+.main {
+    font-family: "Noto Sans", sans-serif;
+    margin-left:calc(10% + 2rem);
+    padding:1rem;
+    color: black;
+}
+
+
+.short {
+    .sidebar {
+        width:3%;
+        text-align:center;
+        .logo, .text, .avatar, .name {
+            display:none;
+        }
+
+        .sidebartop{
+            display:block;
+            height:75px;
+
+            .menu {
+                width:100%;
+                text-align: center;
+            }
+        }
+
+        .account{
+            display:block;
+
+            .logout {
+                width:100%;
+                text-align: center;
+            }
+        }   
+    }
+    .main {
+        margin-left:calc(3% + 2rem);
+    }
+
+}
+
